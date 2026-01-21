@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f8f2f2;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #7a0000, #b50000);
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav {
+    background: white;
+    padding: 25px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.enlaces-botones ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+}
+
+.enlaces-botones a {
+    color: #8b0000;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.enlaces-botones img {
+    width: 60px;
+    margin-top: 6px;
+    transition: 0.3s;
+}
+
+.enlaces-botones li:hover img {
+    transform: scale(1.12);
+}
+
+.enlaces-botones li:hover a {
+    color: #b30000;
+}
+
+.pantalla-completa {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contenedor-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.item {
+    background: #ffffff;
+    border-left: 8px solid #b22222;
+    padding: 30px;
+    width: 650px;
+    min-height: 520px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.22);
+}
+
+.item h4 {
+    color: #8b0000;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.item p {
+    font-size: 1.12rem;
+    line-height: 1.6;
+}
+
+.item img {
+    max-width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.item.abajo {
+    flex-basis: 100%;
+    max-width: 650px;
+}
+
+footer {
+    margin-top: 70px;
+    background: #7a0000;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+footer a {
+    color: #ffdddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+ 
+
+ 

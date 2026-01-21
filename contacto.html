@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+    <link rel="stylesheet" href="estilo.css" type="text/css"/>
+</head>
+
+<body>
+
+<form action="enviar.php method=" post>
+
+    <fieldset>
+        <legend>Datos personales</legend>
+
+        Nombre:
+        <input type="text" name="nombre" span class="rojo" size="38"
+        autofocus
+        autocomplete
+        placeholder="Su nombre"
+        title="Escriba su nombre para poder
+        referirnos a usted correctamente"/><br>
+
+        Correo electrónico:
+        <input type="email" name="mail" size="28" required autocomplete placeholder="nombre@servidor.com" title="Escriba su correo electrónico para poder comunicarnos con Ud. lo antes posible"/>
+        <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>reseña de la página</legend>
+
+        ¿que cosas podemos añadir a la página?<br>
+        <textarea name="descripcion"></textarea>
+        <p>
+
+            <input type="radio" name="proceso" value="sinplantear" checked />
+            1 estrella
+
+            <input type="radio" name="proceso" value="enplanificacion" />
+            2 estrellas
+
+            <input type="radio" name="proceso" value="enejecucion" />
+            3 estrellas
+
+            <input type="radio" name="proceso" value="finalizado" />
+            4 estrellas
+
+            <input type="radio" name="proceso" value="finalizado" />
+            5 estrellas
+        <p>
+
+            puntúa del 1 al 10 la calidad del contenido
+            <input type="number" name="presupuesto" value="0" min="0" max="10" step="1">
+    </fieldset>
+
+    <input id="boton_enviar" type="submit" value="Enviar">
+
+</form>
+<a href="index.html">vuelve a la página de inicio</a> <br>
+</body>
+
+</html>

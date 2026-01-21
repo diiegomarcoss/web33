@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="estilo.css" type="text/css"/>
+</head>
+<style>
+  .calc-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: #ffe3e3;
+    border: 2px solid #ff9b9b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+
+  .calc-container h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    color: #b40000;
+  }
+
+  .calc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #calc-display {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: right;
+    box-sizing: border-box;
+  }
+
+  .calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .calc-btn {
+    padding: 8px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #b40000;
+    color: white;
+    transition: 0.15s;
+  }
+
+  .calc-btn.op {
+    background: #d34a4a;
+  }
+
+  .calc-btn.clear {
+    background: #555;
+  }
+
+  .calc-btn:hover {
+    filter: brightness(1.1);
+  }
+
+
+h2 {
+    color: #b40000;
+    font-weight: bold;
+    border-bottom: 3px solid #ffb5b5;
+    padding-bottom: 4px;
+    margin-top: 40px;
+}
+
+summary {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.05rem;
+}
+
+summary:hover {
+    color: #b40000;
+}
+
+details p {
+    background: #ffe5e5;
+    border: 2px solid #ffbaba;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+details p ul, 
+details p li {
+    margin-left: 15px;
+}
+
+ul > li {
+    margin-bottom: 12px;
+}
+a {
+    color: #b40000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#ENLACES {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #ffe3e3;
+    border: 2px solid #ff9b9b;
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#ENLACES h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+</style>
+<body>
+    <h1>EJERCICIOS PARA PRACTICAR EL BLOQUE 1</h1>
+    <h4>HERRAMIENTAS ÚTILES</h4><br>
+    <a href="calculoarea.html">calcular el área de un círculo</a><br>
+    
+    <a href="calculadoraraices.html">calcular raíces</a>
+
+
+    <div id="ENLACES"><h3>ENLACES DE LA PÁGINA</h3>
+      
+          <li><a href="#BLOQUE1"><span class="highlight">BLOQUE 1:</span> ejercicios geometría métrica y dibujo técnico</a></li>
+          <li><a href="#BLOQUE2"><span class="highlight">BLOQUE 2:</span> ejercicios sistemas de representación</a></li>
+          <li><a href="#BLOQUE3"><span class="highlight">BLOQUE 3:</span> ejercicios normalización y documentación gráfica de proyectos</a></li>
+      
+    </div>
+
+        <div id="BLOQUE1"><h2>CONSTRUCCIONES GEOMÉTRICAS</h2></div>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1. Trazar la perpendicular por un punto dado a una recta</summary>
+                        <p>
+                            Dibuja una recta r y un punto P fuera de ella. <br>
+                            Construye una perpendicular a r que pase por P, utilizando solo regla y compás.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2. Trazar una paralela a una recta que pase por un punto exterior</summary>
+                        <p>
+                            Dibuja una recta r y un punto P fuera de ella. <br>
+                            Traza la paralela a r que pasa por P empleando compás y regla sin graduar.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3. Dividir un segmento en 3 partes iguales</summary>
+                        <p>
+                            Dibuja un segmento AB. <br>
+                            Utiliza una semirrecta auxiliar y el método de triángulos semejantes para dividirlo en tres partes iguales, sin medir.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4. Bisecar (dividir en dos partes iguales) un ángulo dado</summary>
+                        <p>
+                            Dibuja un ángulo cualquiera ∠XOY. <br>
+                            Con regla y compás, construye su bisectriz.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5. Copiar una longitud con el compás</summary>
+                        <p>
+                            Dibuja un segmento AB. <br>
+                            Con compás, traslada su longitud a partir de otro punto C para obtener un nuevo segmento CD congruente con el primero.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6. Construir un triángulo equilátero dado un lado</summary>
+                        <p>
+                            Dibuja un segmento AB. <br>
+                            Usa el compás con radio AB para construir el triángulo equilátero ABC sin medir ángulos.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7. Construir los puntos notables de un triángulo</summary>
+                        <p>
+                            Dibuja un triángulo cualquiera ABC. <br>
+                            Con regla y compás, determina:
+                                <ul>
+                                    <li>El circuncentro (intersección de mediatrices).</li>
+                                    <li>El incentro (intersección de bisectrices).</li>
+                                    <li>El baricentro (intersección de medianas).</li>
+                                    <li>El ortocentro (intersección de alturas).</li>
+                                </ul>
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8. Construir la circunferencia circunscrita e inscrita de un triángulo</summary>
+                        <p>
+                            Dibuja un triángulo cualquiera ABC. <br>
+                            Con regla y compás, determina:
+                                <ul>
+                                    <li>Traza la circunferencia circunscrita (centro: circuncentro).</li>
+                                    <li>Traza la circunferencia inscrita (centro: incentro)</li>
+                                </ul>
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9. Construir un cuadrado dado un lado</summary>
+                        <p>
+                            Dibuja un segmento AB.<br>
+                            Levanta la perpendicular en A, lleva con el compás la medida del lado y completa el cuadrado con regla y compás.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10. Construir un pentágono regular inscrito en una circunferencia</summary>
+                        <p>
+                            Dibuja una circunferencia de radio cualquiera.<br>
+                            Usando los métodos clásicos de división de circunferencia, inscribe un pentágono regular con regla y compás.
+                        </p>
+                      </details>
+                    
+                </li>
+            </ul>
+
+
+        <h2>TANGENCIAS</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Tangente a una circunferencia desde un punto exterior P</summary>
+                        <p>
+                            Dibuja una circunferencia y un punto exterior P. Construye las dos tangentes que se pueden trazar desde ese punto a la circunferencia.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Tangentes comunes exteriores a dos circunferencias dadas</summary>
+                        <p>
+                            Dibuja dos circunferencias separadas. Construye las dos tangentes comunes exteriores que tocan a ambas circunferencias sin cruzar el segmento que une sus centros.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Tangentes comunes interiores a dos circunferencias dadas</summary>
+                        <p>
+                            Dibuja dos circunferencias dadas. Construye las tangentes comunes interiores, es decir, aquellas que cruzan el segmento que une los centros de las dos circunferencias.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Circunferencia tangente a una recta y que pase por un punto P</summary>
+                        <p>
+                            Dibuja una recta r y un punto P exterior a ella. Construye una circunferencia que pase por P y sea tangente a la recta r.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Circunferencia tangente a dos rectas que se cortan (tangente a un ángulo)</summary>
+                        <p>
+                            Dibuja dos rectas que se cortan formando un ángulo cualquiera. Construye una circunferencia que sea tangente a ambas rectas, es decir, la circunferencia inscrita en ese ángulo.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Circunferencia tangente a una recta y a otra circunferencia dada</summary>
+                        <p>
+                            Dibuja una recta y una circunferencia dada. Construye una circunferencia que sea tangente a ambas, considerando el caso de tangencia exterior y también el de tangencia interior.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Circunferencia tangente a tres rectas que forman un triángulo</summary>
+                        <p>
+                            Dibuja un triángulo cualquiera. Construye la circunferencia inscrita en él, es decir, la que es tangente a los tres lados del triángulo.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Circunferencia tangente a dos circunferencias dadas y que pase por un punto P</summary>
+                        <p>
+                            Dibuja dos circunferencias dadas y un punto P. Construye una nueva circunferencia que sea tangente a ambas y que pase por el punto P.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Circunferencia tangente interiormente a otra y que pase por un punto P</summary>
+                        <p>
+                            Dibuja una circunferencia y un punto P en su interior. Construye otra circunferencia que sea tangente interiormente a la primera y que pase por el punto P.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Tangentes comunes entre una circunferencia y una parábola o elipse</summary>
+                        <p>
+                            Dibuja una circunferencia y una parábola (o elipse). Construye las tangentes comunes que sean posibles entre ambas figuras, sin que se corten.
+                        </p>
+                      </details>
+                    
+                </li>
+            </ul>
+
+
+            <h2>TRANSFORMACIONES GEOMÉTRICAS</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Traslación de una figura</summary>
+                        <p>
+                          Dibuja un triángulo cualquiera y un vector de traslación. Aplica la traslación al triángulo para obtener su posición final desplazada en la dirección y sentido del vector.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Simetría axial de una figura respecto a una recta</summary>
+                        <p>
+                          Dibuja una figura poligonal y una recta r. Realiza la simetría axial de la figura respecto a la recta r y obtén la figura simétrica.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Simetría central de una figura respecto a un punto</summary>
+                        <p>
+                          Dibuja un cuadrado y un punto O. Construye la simetría central del cuadrado respecto al punto O y obtén su figura transformada.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Rotación de una figura un ángulo dado</summary>
+                        <p>
+                          Dibuja una figura simple (por ejemplo, un triángulo) y un punto O. Rota la figura un ángulo de 90 grados alrededor del punto O en sentido antihorario.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Homotecia de razón positiva</summary>
+                        <p>
+                          Dibuja una figura y un punto O que será el centro de homotecia. Aplica una homotecia de razón 2, obteniendo una figura semejante de doble tamaño con respecto a O.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Homotecia de razón negativa</summary>
+                        <p>
+                          Dibuja una figura y un punto O. Aplica una homotecia de razón -1, obteniendo la figura simétrica y del mismo tamaño al otro lado del centro O.
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Composición de simetrías axiales</summary>
+                        <p>
+                          Dibuja una figura y dos rectas paralelas r y s. Realiza la simetría axial de la figura respecto a r y luego respecto a s. Observa el resultado y determina el desplazamiento equivalente (una traslación).
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Composición de simetrías axiales que se cortan</summary>
+                        <p>
+                          Dibuja una figura y dos rectas que se cortan en un punto O formando un ángulo. Aplica dos simetrías axiales sucesivas respecto a esas rectas y observa que el resultado equivale a una rotación.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Escalado proporcional de una figura (ampliación o reducción)</summary>
+                        <p>
+                          Dibuja un cuadrado o rectángulo y un punto O exterior. Realiza una ampliación o reducción proporcional de la figura desde el punto O con una razón de 1.5 o 0.5, según el caso.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Transformación por rotación y traslación sucesivas</summary>
+                        <p>
+                          Dibuja una figura y un punto O. Rota la figura 60 grados alrededor de O y luego aplica una traslación con un vector dado. Representa la posición final de la figura tras ambas transformaciones.
+                        </p>
+                      </details>
+                      </li>
+                      </ul>
+                    
+            <h2>CURVAS CÓNICAS Y MÉTRICAS</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Trazar una elipse conocidos los ejes mayor y menor</summary>
+                        <p>
+                          Dibuja el eje mayor y el eje menor de una elipse. Construye la elipse completa empleando el método del rectángulo o del foco–directriz.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Trazar una elipse conocidos los focos y la distancia entre ellos</summary>
+                        <p>
+                          Dibuja los dos focos F1 y F2. Sabiendo la distancia constante que cumplen los puntos de la elipse (suma de distancias a los focos), construye varios puntos de la elipse y únelos para obtener su forma.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Trazar una parábola conocidos el foco y la directriz</summary>
+                        <p>
+                          Dibuja un punto F (foco) y una recta d (directriz). Aplica la definición de la parábola: los puntos equidistan de F y d. Localiza varios puntos que cumplan esa condición y únelos para construir la parábola.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Trazar una hipérbola conocidos sus focos y la distancia focal</summary>
+                        <p>
+                          Dibuja los dos focos F1 y F2. Sabiendo que la diferencia de distancias a los focos es constante, determina varios puntos de la hipérbola y dibuja sus ramas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Construcción de una elipse como lugar geométrico</summary>
+                        <p>
+                          Dibuja dos puntos fijos F1 y F2. Marca distintos puntos P de modo que PF1 + PF2 sea constante. Representa el lugar geométrico que forman, que es una elipse.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Construcción de una parábola como lugar geométrico</summary>
+                        <p>
+                          Dibuja una recta d y un punto F fuera de ella. Determina distintos puntos P que equidisten de F y de d. Representa la parábola como el conjunto de esos puntos.
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Construcción de una hipérbola como lugar geométrico</summary>
+                        <p>
+                          Dibuja dos puntos fijos F1 y F2. Marca distintos puntos P tales que la diferencia PF1 – PF2 sea constante. Representa la hipérbola correspondiente.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Trazar la circunferencia principal de una elipse dados los ejes</summary>
+                        <p>
+                          Dibuja una elipse con ejes conocidos. Construye la circunferencia principal o auxiliar que pasa por los vértices del eje menor, utilizada para obtener puntos de la elipse por afinidad.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Determinar los elementos principales de una cónica</summary>
+                        <p>
+                          Dibuja una cónica cualquiera (elipse, parábola o hipérbola). Identifica gráficamente su eje, centro, vértices, focos y directriz.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Aplicación métrica de la elipse: relación entre radios vectores y eje mayor</summary>
+                        <p>
+                          Dibuja una elipse con focos F1 y F2. Elige un punto P sobre la elipse y mide PF1 y PF2. Comprueba gráficamente que la suma de ambas distancias es constante e igual al eje mayor.
+                        </p>
+                      </details>
+                    </li>
+            </ul>
+            <br>
+            <a href="#ENLACES"><span class="highlight">vuelve arriba</span></a>
+
+
+      <div id="BLOQUE2"><h1>EJERCICIOS PARA PRACTICAR EL BLOQUE 2</h1></div>
+        <h2>SISTEMA DIÉDRICO CLÁSICO</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Representar un punto en el sistema diédrico</summary>
+                        <p>
+                          Dibuja los dos planos de proyección (horizontal y vertical). Representa un punto A conocido por sus distancias a ambos planos, obteniendo su proyección horizontal (A1) y su proyección vertical (A2).
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Representar una recta dada por dos puntos</summary>
+                        <p>
+                          Dibuja dos puntos A y B definidos por sus proyecciones diédricas. Une las proyecciones homónimas para obtener la proyección horizontal y la proyección vertical de la recta que pasa por ambos puntos.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Determinar la traza de una recta</summary>
+                        <p>
+                          Dibuja una recta dada por sus proyecciones diédricas. Prolonga cada proyección hasta cortar los ejes de referencia y determina sus trazas horizontal y vertical.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Representar un plano definido por una recta y un punto</summary>
+                        <p>
+                          Dibuja una recta dada y un punto P fuera de ella. Representa el plano que contiene a la recta y al punto construyendo las trazas del plano en ambos planos de proyección.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Intersección de una recta con un plano</summary>
+                        <p>
+                          Dibuja un plano y una recta que lo corta. Determina gráficamente el punto de intersección, encontrando la posición del punto en ambas proyecciones.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Paralelismo entre rectas y planos</summary>
+                        <p>
+                          Dibuja un plano y una recta paralela a él. Comprueba gráficamente el paralelismo mediante la coincidencia de direcciones en las proyecciones horizontal y vertical.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Perpendicularidad entre rectas y planos</summary>
+                        <p>
+                          Dibuja un plano y una recta perpendicular a él. Representa correctamente las proyecciones de la recta y justifica que forma 90 grados con el plano.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Distancia de un punto a un plano</summary>
+                        <p>
+                          Dibuja un punto y un plano. Obtén la distancia mínima entre ambos construyendo la perpendicular desde el punto al plano y midiendo su verdadera magnitud.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Intersección de dos planos</summary>
+                        <p>
+                          Dibuja dos planos que se cortan. Halla la recta de intersección de ambos planos representando sus trazas y uniendo los puntos comunes.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Determinar la verdadera magnitud de un segmento oblicuo</summary>
+                        <p>
+                          Dibuja un segmento definido por sus proyecciones diédricas. Mediante un cambio de plano o un abatimiento, representa su verdadera magnitud.
+                        </p>
+                      </details>
+                    
+                </li>
+            </ul>
+
+
+        <h2>SISTEMA AXONOMÉTRICO</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Representar los ejes axonométricos</summary>
+                        <p>
+                          Dibuja los tres ejes axonométricos X, Y y Z que forman entre sí los ángulos característicos del sistema (isométrico, dimétrico o trimétrico). Señala las direcciones positivas y negativas de cada eje.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Dibujar un cubo en perspectiva isométrica</summary>
+                        <p>
+                          Dibuja los ejes axonométricos isométricos y construye un cubo de arista conocida apoyado sobre el plano horizontal. Representa correctamente las tres dimensiones reducidas por igual.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Dibujar un prisma rectangular en isometría</summary>
+                        <p>
+                          Dibuja los ejes isométricos y construye un prisma rectangular dado por sus dimensiones de base y altura. Representa sus aristas y caras visibles y ocultas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Dibujar una pirámide de base cuadrada en isometría</summary>
+                        <p>
+                          Dibuja los ejes isométricos y representa una pirámide de base cuadrada apoyada sobre el plano horizontal. Indica el vértice superior y las aristas inclinadas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Representar una figura compuesta (cubo y prisma) en isometría</summary>
+                        <p>
+                          Dibuja un cubo y, sobre una de sus caras, añade un prisma rectangular o una pirámide. Representa el conjunto completo en perspectiva isométrica con líneas vistas y ocultas.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Construir un cilindro en isometría</summary>
+                        <p>
+                          Dibuja los ejes axonométricos y representa un cilindro apoyado en el plano horizontal. Utiliza el método de las circunferencias inscritas en cuadrados para dibujar las bases elípticas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Construir un cono en isometría</summary>
+                        <p>
+                          Dibuja los ejes axonométricos y representa un cono apoyado sobre el plano horizontal. Dibuja correctamente la base elíptica y el vértice superior centrado.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Representar una pieza con huecos o entrantes</summary>
+                        <p>
+                          Dibuja una figura prismática con un hueco o rebaje en una de sus caras. Representa la pieza completa en perspectiva isométrica, cuidando las proporciones y las líneas ocultas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Representar una figura en perspectiva dimétrica</summary>
+                        <p>
+                          Dibuja los ejes correspondientes a la perspectiva dimétrica, donde dos ejes tienen igual reducción y el tercero una distinta. Representa un prisma rectangular en este sistema.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Obtener vistas ortogonales a partir de una axonometría</summary>
+                        <p>
+                          Dibuja una figura en axonometría (por ejemplo, un cubo con un rebaje) y obtiene sus vistas ortogonales principales: alzado, planta y perfil, a partir de la representación axonométrica.
+                        </p>
+                      </details>
+                    
+                </li>
+            </ul>
+
+
+            <h2>PROYECCIONES DE OBJETOS</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Representar un cubo mediante sus proyecciones ortogonales</summary>
+                        <p>
+                          Dibuja un cubo apoyado sobre una de sus caras. Representa su alzado, planta y perfil derecho en el sistema diédrico, manteniendo coherencia entre las proyecciones.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Representar un prisma rectangular mediante sus vistas ortogonales</summary>
+                        <p>
+                          Dibuja un prisma rectangular apoyado sobre una cara. Obtén sus tres vistas principales (alzado, planta y perfil), cuidando las proporciones y las alineaciones.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Representar una pirámide de base cuadrada mediante proyecciones</summary>
+                        <p>
+                          Dibuja una pirámide con base cuadrada apoyada en el plano horizontal. Representa el alzado mostrando el vértice y las aristas inclinadas, y su planta como un cuadrado.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Representar un cilindro en proyecciones ortogonales</summary>
+                        <p>
+                          Dibuja un cilindro de base circular apoyado sobre el plano horizontal. Representa su planta como un círculo y su alzado como un rectángulo. Añade también el perfil si es necesario.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Representar las proyecciones ortogonales de un cono</summary>
+                        <p>
+                          Dibuja un cono apoyado sobre su base. Obtén sus tres vistas principales y representa correctamente las líneas de contorno visibles y ocultas.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Representar las proyecciones ortogonales de una figura compuesta</summary>
+                        <p>
+                          Dibuja una figura formada por la unión de un cubo y un prisma rectangular. Representa sus proyecciones ortogonales con precisión y proporción.
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Representar las proyecciones ortogonales de una pieza con hueco cilíndrico</summary>
+                        <p>
+                          Dibuja una figura prismática con un orificio cilíndrico pasante. Representa sus vistas ortogonales, indicando correctamente el hueco mediante líneas discontinuas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Determinar una vista faltante a partir de dos vistas dadas</summary>
+                        <p>
+                          Dibuja las vistas de alzado y planta de un objeto. A partir de ellas, construye la vista de perfil que complete la representación del cuerpo.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Representar las vistas de una figura a partir de su axonometría</summary>
+                        <p>
+                          Dibuja una figura en axonometría (por ejemplo, un prisma con rebajes). Obtén las tres vistas ortogonales principales a partir de esa representación.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Identificar un objeto a partir de sus vistas ortogonales</summary>
+                        <p>
+                          Dibuja las tres vistas principales de una figura (alzado, planta y perfil). Interpreta el objeto en el espacio y realiza un boceto tridimensional de su forma.
+                        </p>
+                      </ul>
+                      </details>
+                      <br>
+                      <a href="#ENLACES"><span class="highlight">vuelve arriba</span></a>
+
+                      <div id="BLOQUE3"><h1>EJERCICIOS PARA PRACTICAR EL BLOQUE 3</h1></div>
+        <h2>NORMALIZACIÓN</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Identificar los formatos normalizados del sistema ISO</summary>
+                        <p>
+                          Dibuja los formatos A0, A1, A2, A3 y A4 según la norma ISO 216. Indica sus dimensiones reales en milímetros y la relación entre un formato y el siguiente.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Clasificar los tipos de líneas normalizadas</summary>
+                        <p>
+                          Realiza una tabla donde dibujes los distintos tipos de líneas utilizadas en dibujo técnico: continua gruesa, continua fina, discontinua, de trazo y punto, de eje, de referencia y de rotura. Especifica su aplicación principal según la norma UNE.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Dibujar un cajetín normalizado</summary>
+                        <p>
+                          Dibuja un formato A4 horizontal e inserta un cajetín normalizado en la esquina inferior derecha. Incluye los apartados de título del plano, nombre del autor, fecha, escala y número de plano.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Representar correctamente escalas gráficas y numéricas</summary>
+                        <p>
+                          Dibuja un segmento de 10 cm a escala 1:1. Después represéntalo a escala 1:2, 2:1 y 1:5. Indica en cada caso la escala correspondiente y el valor real representado.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Identificar las normas UNE e ISO más utilizadas en dibujo técnico</summary>
+                        <p>
+                          Haz una lista con algunas de las normas más comunes (por ejemplo, formatos, líneas, acotación, proyecciones y símbolos) e indica brevemente qué regula cada una.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Dibujar los tipos de proyecciones normalizados</summary>
+                        <p>
+                          Representa un cubo en proyección europea (primer diedro) y en proyección americana (tercer diedro). Indica el símbolo normalizado de cada sistema y sus diferencias.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Representar los símbolos normalizados de cortes y secciones</summary>
+                        <p>
+                          Dibuja los símbolos que indican la dirección del corte y las zonas rayadas. Explica la forma y orientación de las flechas y cómo se representa la línea de corte.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Representar los tipos de acotación normalizados</summary>
+                        <p>
+                          Dibuja una figura simple y acótala correctamente según las normas UNE. Incluye cotas en cadena, en paralelo y combinadas, respetando los espacios y la orientación de las cifras.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Identificar símbolos técnicos normalizados en planos</summary>
+                        <p>
+                          Dibuja y explica el significado de algunos símbolos comunes: roscas, soldaduras, ejes, centros, materiales y rugosidad superficial.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Elaborar un plano técnico cumpliendo las normas de representación</summary>
+                        <p>
+                          Dibuja una pieza sencilla con sus vistas principales, acotación, tipos de línea, símbolo de proyección, escala y cajetín normalizado. Revisa que cumpla con los criterios establecidos por las normas UNE e ISO.
+                        </p>
+                      </details>
+                    
+                </li>
+            </ul>
+
+
+        <h2>CORTES Y SECCIONES</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Representar un corte total de una pieza simétrica</summary>
+                        <p>
+                          Dibuja una pieza simétrica (por ejemplo, un prisma con un orificio central). Realiza un corte total por su plano de simetría y representa la vista seccionada con el rayado normalizado.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Representar un corte parcial</summary>
+                        <p>
+                          Dibuja una pieza con un hueco interior y representa solo una parte seccionada para mostrar el interior. Utiliza una línea de rotura irregular para indicar el límite del corte parcial.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Representar un corte escalonado</summary>
+                        <p>
+                          Dibuja una pieza con varios detalles interiores no alineados. Traza un plano de corte formado por varios tramos y representa el corte escalonado en una sola vista.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Representar un corte auxiliar</summary>
+                        <p>
+                          Dibuja una pieza con una superficie inclinada o irregular. Realiza un corte auxiliar en el plano oblicuo correspondiente para mostrar correctamente esa superficie.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Representar una sección desplazada</summary>
+                        <p>
+                          Dibuja una pieza con varios elementos interiores paralelos. Realiza una sección desplazada, es decir, una sección que une distintos planos de corte y se representa como si fuera un único corte.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Representar una sección abatida</summary>
+                        <p>
+                          Dibuja una pieza con un orificio o ranura inclinada. Realiza un plano de corte inclinado y abátelo sobre el plano principal para representar la forma real de la sección.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Representar secciones sucesivas</summary>
+                        <p>
+                          Dibuja una pieza alargada con varios cambios de forma. Representa secciones transversales a distintas alturas o posiciones a lo largo de su eje.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Representar cortes combinados en una misma pieza</summary>
+                        <p>
+                          Dibuja una pieza con zonas simétricas y otras con detalles localizados. Combina un corte total en una parte y un corte parcial en otra dentro de la misma vista.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Representar el rayado normalizado de una sección</summary>
+                        <p>
+                          Dibuja una sección de una pieza e indica correctamente el rayado con líneas finas inclinadas 45 grados. Representa distintos materiales utilizando tramas convencionales normalizadas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Representar una pieza seccionada con otra pieza en contacto</summary>
+                        <p>
+                          Dibuja un conjunto formado por dos piezas unidas (por ejemplo, un eje dentro de un cubo). Representa un corte total del conjunto, aplicando el rayado en direcciones opuestas para distinguir las piezas.
+                        </p>
+                      </details>
+                    
+                </li>
+            </ul>
+
+
+            <h2>DOCUMENTACIÓN GRÁFICA</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Identificar los elementos de un plano técnico</summary>
+                        <p>
+                          Dibuja un formato A3 e identifica sus partes principales: marco, cajetín, escalas, acotación, vistas, secciones y símbolos. Etiqueta cada elemento correctamente.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Completar un cajetín técnico</summary>
+                        <p>
+                          Dibuja un cajetín normalizado y rellénalo con los datos típicos de un plano: nombre del proyecto, autor, fecha, escala, número de plano y revisión.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Elaborar un croquis acotado de una pieza simple</summary>
+                        <p>
+                          Dibuja una pieza sencilla a mano alzada, manteniendo la proporción. Añade las cotas principales, las líneas de referencia y los símbolos normalizados de acotación.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Interpretar un plano técnico</summary>
+                        <p>
+                          Observa un plano de una pieza con vistas, cortes y cotas. Identifica las partes visibles y ocultas, las secciones representadas y las medidas principales.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Realizar la puesta en limpio de un croquis</summary>
+                        <p>
+                          A partir de un croquis dado, dibuja la pieza con instrumentos, respetando las normas de línea, escala, formato y acotación para convertirlo en un plano técnico correcto.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Elaborar las vistas principales de una pieza</summary>
+                        <p>
+                          Dibuja una pieza sencilla en perspectiva isométrica. A partir de ella, obtén las tres vistas ortogonales principales: alzado, planta y perfil.
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Representar el despiece de un conjunto</summary>
+                        <p>
+                          Dibuja un conjunto formado por dos o tres piezas unidas. Representa cada pieza por separado con sus vistas principales, cotas y cajetín identificativo.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Realizar un plano de conjunto</summary>
+                        <p>
+                          Dibuja un conjunto mecánico o estructural formado por varias piezas ensambladas. Representa sus vistas generales, cortes y detalles necesarios para su comprensión.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Incluir símbolos normalizados en un plano</summary>
+                        <p>
+                          Dibuja una pieza y añade en su plano los símbolos normalizados que correspondan: tipo de proyección, superficie, roscas, materiales o soldaduras.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Preparar la documentación final de un proyecto técnico</summary>
+                        <p>
+                          Diseña una hoja de plano completa con formato, cajetín, escala, acotación, vistas, secciones, símbolos y título. Preséntala como parte de la documentación gráfica final de un proyecto.
+                        </p>
+                      </details>
+                      </li>
+                      </ul>
+                    
+            <h2>CROQUIS Y PLANOS</h2>
+            <ul>
+                <li>
+                    <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">1) Realizar el croquis a mano alzada de una pieza prismática</summary>
+                        <p>
+                          Dibuja a mano alzada una pieza prismática simple (por ejemplo, un bloque con un rebaje). Mantén las proporciones y la claridad de las líneas principales.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">2) Acotar un croquis a mano alzada</summary>
+                        <p>
+                          A partir de un croquis sin medidas, añade las cotas principales necesarias para definir completamente la pieza, utilizando líneas de cota, auxiliares y cifras.
+                        </p>
+                      </details>
+                </li>   <br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">3) Dibujar el croquis de una pieza simétrica</summary>
+                        <p>
+                          Realiza el croquis de una pieza simétrica indicando el eje de simetría y las medidas fundamentales a un solo lado del eje.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">4) Obtener las vistas principales a partir de un croquis</summary>
+                        <p>
+                          Dibuja un croquis en perspectiva de una pieza y obtén sus tres vistas ortogonales principales: alzado, planta y perfil.
+                        </p>
+                      </details>
+                </li><br>
+                <li>       
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">5) Realizar el croquis de una pieza con huecos o taladros</summary>
+                        <p>
+                          Dibuja a mano alzada una pieza con uno o varios orificios. Indica la posición y el diámetro de cada hueco mediante acotación adecuada.
+                        </p>
+                      </details>
+                </li><br> 
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">6) Representar el plano acotado de una pieza a partir de un croquis</summary>
+                        <p>
+                          Toma un croquis proporcionado y transpásalo con instrumentos a un formato A4. Dibuja las vistas necesarias, añade las cotas y completa el plano técnico según las normas.
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">7) Elaborar un croquis de conjunto</summary>
+                        <p>
+                          Dibuja a mano alzada un conjunto formado por dos o más piezas encajadas (por ejemplo, un eje y un cubo). Representa las formas principales y las relaciones entre las piezas.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">8) Dibujar el plano de despiece de un conjunto</summary>
+                        <p>
+                          A partir del croquis de un conjunto, representa cada pieza por separado en vistas ortogonales y acótalas correctamente, preparando el despiece para fabricación.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">9) Completar un cajetín de plano a partir de un croquis</summary>
+                        <p>
+                          Toma un croquis o plano sin cajetín y añádelo en la parte inferior derecha del formato. Incluye los datos necesarios: título de la pieza, autor, escala y fecha.
+                        </p>
+                      </details>
+                </li><br>
+                <li>
+                      <details>
+                        <summary style="color: rgb(0, 0, 0); cursor: pointer; display: inline;">10) Convertir un croquis en un plano técnico normalizado</summary>
+                        <p>
+                          A partir de un croquis a mano alzada de una pieza, realiza su puesta en limpio en formato A3 o A4, con instrumentos, vistas correctas, acotación, símbolos y cajetín, siguiendo las normas UNE.
+                        </p>
+                      </details>
+                    </li>
+            </ul>
+            <br>
+<a href="#ENLACES"><span class="highlight">vuelve arriba</span></a>
+
+<!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d9127bf1-2235-4ee4-92bb-31c2892e99c0" data-elfsight-app-lazy></div>
+</body>
+<br>
+<a href="index.html">vuelve a la página de inicio</a> <br>
+</html>
